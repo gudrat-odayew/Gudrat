@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="tk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meniň Portfoliom</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 1. Esasy Reňkler we Sazlamalar */
+        :root {
+            --primary-color: #2563eb; /* Gök reňk */
+            --bg-color: #ffffff;
+            --text-color: #1f2937;
+            --section-bg: #f3f4f6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        /* 2. Navigasiýa (Menýu) */
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 70px;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .logo { font-weight: 700; font-size: 1.5rem; color: var(--primary-color); }
+
+        /* 3. Hero Section (Giriş Bölümi) */
+        .hero {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            color: white;
+            padding: 20px;
+        }
+
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; opacity: 0.9; }
+
+        /* 4. Bölümler (Sections) */
+        .container { max-width: 1000px; margin: 50px auto; padding: 20px; }
+        
+        h2 { text-align: center; margin-bottom: 30px; position: relative; }
+        h2::after {
+            content: '';
+            width: 50px; height: 4px;
+            background: var(--primary-color);
+            position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .skill-card {
+            background: var(--section-bg);
+            padding: 20px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover { transform: translateY(-5px); background: #e5e7eb; }
+
+        /* 5. Footer */
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #1f2937;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Meniň Adym</div>
+        <div>HTML | CSS | JS</div>
+    </nav>
+
+    <section class="hero">
+        <h1>Salam, Men [Siziň Adyňyz]</h1>
+        <p>Frontend Developer bolmaga dalaşgär we täze tehnologiýalary öwreniji.</p>
+    </section>
+
+    <div class="container">
+        <section id="about">
+            <h2>Men Barada</h2>
+            <p>Men web-sahypalaryň döredilişine gyzyklanýaryn. Häzirki wagtda HTML, CSS we JavaScript dilleri arkaly döwrebap interfeýsleri gurmagy öwrenýärin. Maksadym — uly göwrümli web-taslamalaryň bir bölegi bolmak.</p>
+        </section>
+
+        <section id="skills" style="margin-top: 80px;">
+            <h2>Ukyplarym</h2>
+            <div class="skills-grid">
+                <div class="skill-card"><strong>HTML5</strong><br>Struktura</div>
+                <div class="skill-card"><strong>CSS3</strong><br>Dizaýn</div>
+                <div class="skill-card"><strong>JS</strong><br>Logika</div>
+                <div class="skill-card"><strong>Responsive</strong><br>Mobil-laýyk</div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Ähli hukuklar goralan.</p>
+        <p>Email: menin-emailym@example.com</p>
+    </footer>
+
+</body>
+</html>
